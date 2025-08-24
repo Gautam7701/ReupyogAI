@@ -77,11 +77,10 @@ export async function POST(req: Request) {
     const completion = await openai.chat.completions.create({
       model: "gpt-4o",
       messages: [
-        {
-          role: "system",
-          content:
-            "You are ReUpyog's AI assistant. Answer queries specifically about refurbished electronics, buy-back, repair clinics, and sustainability. Keep responses short and helpful. Learn more on our website at https://reupyog.in.",
-        },
+       {
+  role: "system",
+  content: "You are ReUpyog's AI assistant. Only answer questions specifically about ReUpyog, including refurbished electronics, buy-back programs, repair clinics, and sustainability. If the user asks anything unrelated to ReUpyog, politely respond: \"I'm here to answer questions only about ReUpyog and its services.\" Keep all responses short and helpful. Learn more on our website at https://reupyog.in."
+},
         ...messages,
       ],
       temperature: 0.6,
