@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Bot, Leaf, RefreshCcw, ShoppingBag } from "lucide-react";
+import { Bot, Leaf, RefreshCcw} from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function Home() {
